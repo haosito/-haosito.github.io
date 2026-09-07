@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="google-site-verification" content="ZWHVh2Cs07tMQj6Orp-AkMFnGIfsu1KYf17qP3y2Ogc" />
+  <meta name="description" content="Creación de páginas web profesionales para negocios de Tenerife. Diseño moderno, responsive y preparado para Google.">
+  <meta name="theme-color" content="#0b2942">
+  <title>Creador de páginas web en Tenerife | Tu negocio en Internet</title>
+  <style>
+    :root{
+      --navy:#0b2942; --blue:#1677d2; --light:#f5f8fb; --text:#172b3d;
+      --muted:#647789; --border:#dfe7ee; --white:#fff;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:Arial,Helvetica,sans-serif;color:var(--text);line-height:1.6;background:#fff}
+    a{text-decoration:none;color:inherit}
+    .container{width:min(1120px,92%);margin:auto}
+    header{position:sticky;top:0;z-index:10;background:rgba(11,41,66,.97);color:white;border-bottom:1px solid rgba(255,255,255,.1)}
+    nav{min-height:72px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+    .brand{font-weight:800;font-size:18px;line-height:1.1;display:flex;gap:10px;align-items:center}
+    .brand-mark{font-size:27px}
+    .links{display:flex;gap:25px;font-size:14px}
+    .links a:hover{opacity:.75}
+    .nav-cta,.btn{display:inline-block;padding:12px 18px;border-radius:8px;font-weight:700}
+    .nav-cta{border:1px solid rgba(255,255,255,.7)}
+    .hero{color:white;background:
+      linear-gradient(90deg,rgba(7,31,50,.95),rgba(7,31,50,.62)),
+      linear-gradient(135deg,#0d507b 0%,#1677d2 50%,#6aaed6 100%);
+      min-height:620px;display:flex;align-items:center;position:relative;overflow:hidden}
+    .hero:after{content:"";position:absolute;inset:auto -10% -170px;height:330px;background:rgba(255,255,255,.08);border-radius:50%}
+    .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:55px;align-items:center;position:relative;z-index:1}
+    .eyebrow{text-transform:uppercase;letter-spacing:1.3px;font-size:13px;font-weight:700;opacity:.85;margin-bottom:14px}
+    h1{font-size:clamp(40px,5vw,64px);line-height:1.05;margin-bottom:22px}
+    .hero p{font-size:19px;max-width:640px;color:#e7f1f8;margin-bottom:30px}
+    .btn-primary{background:#1687ef;color:white;margin-right:10px}
+    .btn-secondary{border:1px solid rgba(255,255,255,.75);color:white}
+    .device{background:#fff;border:10px solid #172331;border-radius:14px;box-shadow:0 28px 70px rgba(0,0,0,.3);padding:26px;color:var(--navy);transform:rotate(1deg)}
+    .device-top{height:12px;border-radius:10px;background:#e9eef2;margin-bottom:25px}
+    .device h3{font-size:32px;line-height:1.1;margin-bottom:12px}
+    .device p{font-size:15px;color:#617385;margin-bottom:18px}
+    .device-boxes{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+    .device-box{height:85px;background:#f1f6fa;border-radius:8px}
+    section{padding:82px 0}
+    .section-head{margin-bottom:38px}
+    .kicker{color:#1677d2;text-transform:uppercase;font-size:13px;font-weight:800;letter-spacing:1px}
+    h2{font-size:38px;line-height:1.15;margin:7px 0 10px}
+    .lead{color:var(--muted);max-width:650px}
+    .services{background:var(--light)}
+    .cards{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+    .card{background:white;border:1px solid var(--border);border-radius:12px;padding:25px}
+    .icon{font-size:28px;margin-bottom:14px}
+    .card h3{margin-bottom:8px}
+    .card p{color:var(--muted);font-size:14px}
+    .portfolio-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+    .project{border:1px solid var(--border);border-radius:12px;overflow:hidden;background:white}
+    .project-img{height:180px;background:linear-gradient(135deg,#123a57,#287fba);display:flex;align-items:end;padding:20px;color:white;font-size:25px;font-weight:800}
+    .project:nth-child(2) .project-img{background:linear-gradient(135deg,#392c48,#b16a7c)}
+    .project:nth-child(3) .project-img{background:linear-gradient(135deg,#234c3d,#82a96c)}
+    .project-info{padding:18px}.project-info p{color:var(--muted);font-size:14px}
+    .about{background:var(--navy);color:white}
+    .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:55px;align-items:center}
+    .about p{color:#d9e5ee}
+    .checks{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:22px}
+    .checks div:before{content:"✓";margin-right:9px;color:#65b6ff;font-weight:900}
+    .pricing{background:var(--light)}
+    .pricing-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+    .price{background:white;border:1px solid var(--border);border-radius:12px;padding:28px}
+    .price.featured{border:2px solid #1677d2;transform:translateY(-8px)}
+    .price h3{font-size:21px}.amount{font-size:33px;font-weight:800;margin:12px 0 18px}
+    .price ul{list-style:none;color:var(--muted);margin-bottom:22px}
+    .price li{margin:9px 0}.price li:before{content:"✓";color:#1677d2;margin-right:8px;font-weight:bold}
+    .price .btn{background:var(--navy);color:white;width:100%;text-align:center}
+    .contact-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:45px}
+    .contact-list{margin-top:25px;color:var(--muted)}
+    .contact-list div{margin:12px 0}
+    form{display:grid;gap:13px}
+    input,textarea{width:100%;padding:14px;border:1px solid var(--border);border-radius:8px;font:inherit}
+    textarea{min-height:140px;resize:vertical}
+    form button{border:0;cursor:pointer;font:inherit;background:var(--blue);color:white}
+    footer{background:#071e31;color:#c8d5df;padding:35px 0}
+    .footer-row{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:13px}
+    .mobile-menu{display:none}
+    @media(max-width:900px){
+      .links{display:none}.mobile-menu{display:block}
+      .hero-grid,.about-grid,.contact-grid{grid-template-columns:1fr}
+      .hero{padding:75px 0}.cards{grid-template-columns:1fr 1fr}
+      .portfolio-grid,.pricing-grid{grid-template-columns:1fr}
+      .price.featured{transform:none}
+    }
+    @media(max-width:560px){
+      section{padding:60px 0}.cards{grid-template-columns:1fr}
+      h2{font-size:31px}.hero p{font-size:17px}
+      .device h3{font-size:26px}
+    }
+  </style>
+</head>
+<body>
+<header>
+  <div class="container">
+    <nav>
+      <a class="brand" href="#inicio"><span class="brand-mark">⌁</span><span>Creador de páginas web<br>en Tenerife</span></a>
+      <div class="links">
+        <a href="#inicio">Inicio</a><a href="#servicios">Servicios</a><a href="#ejemplos">Ejemplos</a>
+        <a href="#precios">Precios</a><a href="#sobre-mi">Sobre mí</a><a href="#contacto">Contacto</a>
+      </div>
+      <a class="nav-cta" href="#contacto">Contacta ahora</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section class="hero" id="inicio">
+  <div class="container hero-grid">
+    <div>
+      <div class="eyebrow">Tu negocio en Internet, sin complicaciones</div>
+      <h1>Creador de páginas web en Tenerife</h1>
+      <p>Diseño y desarrollo páginas web profesionales para negocios locales. Te ayudo a tener presencia en Internet, mostrar tus servicios y conseguir nuevos clientes.</p>
+      <a class="btn btn-primary" href="#contacto">Solicita tu página web →</a>
+      <a class="btn btn-secondary" href="#ejemplos">Ver ejemplos</a>
+    </div>
+    <div class="device" aria-label="Vista previa de una página web">
+      <div class="device-top"></div>
+      <h3>Tu negocio<br>en buenas manos</h3>
+      <p>Una web moderna, clara y adaptada a móviles para presentar tu negocio de forma profesional.</p>
+      <div class="device-boxes"><div class="device-box"></div><div class="device-box"></div><div class="device-box"></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="services" id="servicios">
+  <div class="container">
+    <div class="section-head"><div class="kicker">Servicios</div><h2>Todo lo que necesitas</h2><p class="lead">Soluciones web adaptadas a las necesidades de tu negocio.</p></div>
+    <div class="cards">
+      <div class="card"><div class="icon">▣</div><h3>Páginas web</h3><p>Webs corporativas modernas para presentar tu negocio y tus servicios.</p></div>
+      <div class="card"><div class="icon">🛒</div><h3>Tiendas online</h3><p>Vende tus productos o servicios desde cualquier dispositivo.</p></div>
+      <div class="card"><div class="icon">▯</div><h3>Diseño responsive</h3><p>Tu página se verá bien en móviles, tablets y ordenadores.</p></div>
+      <div class="card"><div class="icon">⌕</div><h3>SEO básico</h3><p>Configuración inicial para facilitar que los buscadores entiendan tu web.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="ejemplos">
+  <div class="container">
+    <div class="section-head"><div class="kicker">Ejemplos</div><h2>Algunos trabajos de muestra</h2><p class="lead">Diseños de ejemplo para distintos tipos de negocios de Tenerife.</p></div>
+    <div class="portfolio-grid">
+      <article class="project"><div class="project-img">Restaurante El Mirador</div><div class="project-info"><strong>Restaurante · La Orotava</strong><p>Menú, ubicación, reservas y presentación del negocio.</p></div></article>
+      <article class="project"><div class="project-img">Salón de Belleza Aura</div><div class="project-info"><strong>Peluquería · Puerto de la Cruz</strong><p>Servicios, galería, horarios y contacto.</p></div></article>
+      <article class="project"><div class="project-img">Floristería Dayana</div><div class="project-info"><strong>Floristería · Santa Cruz</strong><p>Catálogo, pedidos y datos de contacto.</p></div></article>
+    </div>
+  </div>
+</section>
+
+<section class="about" id="sobre-mi">
+  <div class="container about-grid">
+    <div>
+      <div class="kicker">¿Por qué elegirme?</div><h2>Profesional, cercano y comprometido</h2>
+      <p>Me implico en cada proyecto para crear una web clara, atractiva y adaptada a las necesidades de cada negocio.</p>
+      <div class="checks"><div>Atención personalizada</div><div>Entrega en plazo</div><div>Diseño para móviles</div><div>Soporte y mantenimiento</div></div>
+    </div>
+    <div>
+      <p style="font-size:24px;font-weight:700">“Tu negocio también merece estar en Internet.”</p>
+      <p style="margin-top:12px">Cuéntame tu idea y te preparo una propuesta sencilla, sin complicaciones.</p>
+    </div>
+  </div>
+</section>
+
+<section class="pricing" id="precios">
+  <div class="container">
+    <div class="section-head"><div class="kicker">Precios</div><h2>Planes adaptados a ti</h2><p class="lead">Precios de ejemplo que puedes modificar según el servicio que quieras ofrecer.</p></div>
+    <div class="pricing-grid">
+      <div class="price"><h3>Básico</h3><div class="amount">desde 99€</div><ul><li>Diseño moderno</li><li>Hasta 5 secciones</li><li>Adaptada a móviles</li><li>Formulario de contacto</li></ul><a class="btn" href="#contacto">Solicitar presupuesto</a></div>
+      <div class="price featured"><h3>Profesional</h3><div class="amount">desde 199€</div><ul><li>Diseño personalizado</li><li>Hasta 8 secciones</li><li>SEO básico</li><li>Soporte inicial</li></ul><a class="btn" href="#contacto">Solicitar presupuesto</a></div>
+      <div class="price"><h3>A medida</h3><div class="amount">desde 299€</div><ul><li>Proyecto personalizado</li><li>Funciones avanzadas</li><li>Integraciones</li><li>Soporte y mantenimiento</li></ul><a class="btn" href="#contacto">Hablar del proyecto</a></div>
+    </div>
+  </div>
+</section>
+
+<section id="contacto">
+  <div class="container contact-grid">
+    <div>
+      <div class="kicker">Contacto</div><h2>¿Hablamos de tu web?</h2>
+      <p class="lead">Cuéntame qué negocio tienes y qué necesitas. Te responderé con una propuesta.</p>
+      <div class="contact-list">
+        <div>📱 WhatsApp: <a href="https://wa.me/34657465125" target="_blank" rel="noopener"><strong>657 465 125</strong></a></div>
+        <div>✉️ Email: <strong>haoj63205@gmail.com</strong></div>
+        <div>📍 Tenerife, Canarias</div>
+      </div>
+    </div>
+    <form onsubmit="sendForm(event)">
+      <input id="name" type="text" placeholder="Tu nombre" required>
+      <input id="business" type="text" placeholder="Nombre de tu negocio" required>
+      <input id="email" type="email" placeholder="Tu email" required>
+      <textarea id="message" placeholder="¿Qué tipo de página necesitas?" required></textarea>
+      <button class="btn" type="submit">Enviar consulta →</button>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="container footer-row">
+    <div>© 2026 Creador de páginas web en Tenerife</div>
+    <div>Política de privacidad · Aviso legal · Cookies</div>
+  </div>
+</footer>
+
+<script>
+function sendForm(e){
+  e.preventDefault();
+  const name=document.getElementById('name').value;
+  const business=document.getElementById('business').value;
+  const email=document.getElementById('email').value;
+  const message=document.getElementById('message').value;
+  const subject=encodeURIComponent('Consulta web - '+business);
+  const body=encodeURIComponent(`Hola, soy ${name}.\\nNegocio: ${business}\\nEmail: ${email}\\n\\n${message}`);
+  // Sustituye haoj63205@gmail.com en el enlace cuando publiques la web.
+  window.location.href=`mailto:TU_EMAIL?subject=${subject}&body=${body}`;
+}
+</script>
+</body>
+</html>
